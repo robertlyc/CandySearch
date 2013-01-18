@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E16317EF16A932370082359E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16317EE16A932370082359E /* UIKit.framework */; };
+		E16317F116A932370082359E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16317F016A932370082359E /* Foundation.framework */; };
+		E16317F316A932370082359E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16317F216A932370082359E /* CoreGraphics.framework */; };
+		E16317F916A932370082359E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E16317F716A932370082359E /* InfoPlist.strings */; };
+		E16317FB16A932370082359E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16317FA16A932370082359E /* main.m */; };
+		E16317FF16A932370082359E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16317FE16A932370082359E /* AppDelegate.m */; };
+		E163180116A932370082359E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E163180016A932370082359E /* Default.png */; };
+		E163180316A932370082359E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E163180216A932370082359E /* Default@2x.png */; };
+		E163180516A932370082359E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E163180416A932370082359E /* Default-568h@2x.png */; };
+		E163180816A932370082359E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E163180616A932370082359E /* MainStoryboard.storyboard */; };
+		E163181716A933830082359E /* Candy.m in Sources */ = {isa = PBXBuildFile; fileRef = E163181616A933830082359E /* Candy.m */; };
+		E163181A16A9363D0082359E /* CandyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E163181916A9363D0082359E /* CandyTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E16317EA16A932370082359E /* CandySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16317EE16A932370082359E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E16317F016A932370082359E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E16317F216A932370082359E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E16317F616A932370082359E /* CandySearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CandySearch-Info.plist"; sourceTree = "<group>"; };
+		E16317F816A932370082359E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E16317FA16A932370082359E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E16317FC16A932370082359E /* CandySearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CandySearch-Prefix.pch"; sourceTree = "<group>"; };
+		E16317FD16A932370082359E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E16317FE16A932370082359E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E163180016A932370082359E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E163180216A932370082359E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E163180416A932370082359E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E163180716A932370082359E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E163181516A933830082359E /* Candy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Candy.h; sourceTree = "<group>"; };
+		E163181616A933830082359E /* Candy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Candy.m; sourceTree = "<group>"; };
+		E163181816A9363D0082359E /* CandyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandyTableViewController.h; sourceTree = "<group>"; };
+		E163181916A9363D0082359E /* CandyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandyTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E16317E716A932370082359E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E16317EF16A932370082359E /* UIKit.framework in Frameworks */,
+				E16317F116A932370082359E /* Foundation.framework in Frameworks */,
+				E16317F316A932370082359E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E16317DF16A932370082359E = {
+			isa = PBXGroup;
+			children = (
+				E16317F416A932370082359E /* CandySearch */,
+				E16317ED16A932370082359E /* Frameworks */,
+				E16317EB16A932370082359E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E16317EB16A932370082359E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E16317EA16A932370082359E /* CandySearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E16317ED16A932370082359E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E16317EE16A932370082359E /* UIKit.framework */,
+				E16317F016A932370082359E /* Foundation.framework */,
+				E16317F216A932370082359E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E16317F416A932370082359E /* CandySearch */ = {
+			isa = PBXGroup;
+			children = (
+				E16317FD16A932370082359E /* AppDelegate.h */,
+				E16317FE16A932370082359E /* AppDelegate.m */,
+				E163180616A932370082359E /* MainStoryboard.storyboard */,
+				E163181516A933830082359E /* Candy.h */,
+				E163181616A933830082359E /* Candy.m */,
+				E163181816A9363D0082359E /* CandyTableViewController.h */,
+				E163181916A9363D0082359E /* CandyTableViewController.m */,
+				E16317F516A932370082359E /* Supporting Files */,
+			);
+			path = CandySearch;
+			sourceTree = "<group>";
+		};
+		E16317F516A932370082359E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E16317F616A932370082359E /* CandySearch-Info.plist */,
+				E16317F716A932370082359E /* InfoPlist.strings */,
+				E16317FA16A932370082359E /* main.m */,
+				E16317FC16A932370082359E /* CandySearch-Prefix.pch */,
+				E163180016A932370082359E /* Default.png */,
+				E163180216A932370082359E /* Default@2x.png */,
+				E163180416A932370082359E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E16317E916A932370082359E /* CandySearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E163180E16A932370082359E /* Build configuration list for PBXNativeTarget "CandySearch" */;
+			buildPhases = (
+				E16317E616A932370082359E /* Sources */,
+				E16317E716A932370082359E /* Frameworks */,
+				E16317E816A932370082359E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CandySearch;
+			productName = CandySearch;
+			productReference = E16317EA16A932370082359E /* CandySearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E16317E116A932370082359E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = RoBeRt;
+			};
+			buildConfigurationList = E16317E416A932370082359E /* Build configuration list for PBXProject "CandySearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E16317DF16A932370082359E;
+			productRefGroup = E16317EB16A932370082359E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E16317E916A932370082359E /* CandySearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E16317E816A932370082359E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E16317F916A932370082359E /* InfoPlist.strings in Resources */,
+				E163180116A932370082359E /* Default.png in Resources */,
+				E163180316A932370082359E /* Default@2x.png in Resources */,
+				E163180516A932370082359E /* Default-568h@2x.png in Resources */,
+				E163180816A932370082359E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E16317E616A932370082359E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E16317FB16A932370082359E /* main.m in Sources */,
+				E16317FF16A932370082359E /* AppDelegate.m in Sources */,
+				E163181716A933830082359E /* Candy.m in Sources */,
+				E163181A16A9363D0082359E /* CandyTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E16317F716A932370082359E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E16317F816A932370082359E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E163180616A932370082359E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E163180716A932370082359E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E163180C16A932370082359E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E163180D16A932370082359E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E163180F16A932370082359E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CandySearch/CandySearch-Prefix.pch";
+				INFOPLIST_FILE = "CandySearch/CandySearch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E163181016A932370082359E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CandySearch/CandySearch-Prefix.pch";
+				INFOPLIST_FILE = "CandySearch/CandySearch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E16317E416A932370082359E /* Build configuration list for PBXProject "CandySearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E163180C16A932370082359E /* Debug */,
+				E163180D16A932370082359E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E163180E16A932370082359E /* Build configuration list for PBXNativeTarget "CandySearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E163180F16A932370082359E /* Debug */,
+				E163181016A932370082359E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E16317E116A932370082359E /* Project object */;
+}
