@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
     
+    self.candySearchBar.showsScopeBar = NO;
+    [self.candySearchBar sizeToFit];
+    
     self.candyArray = [NSArray arrayWithObjects:
                   [Candy candyOfCategory:@"chocolate" name:@"chocolate bar"],
                   [Candy candyOfCategory:@"chocolate" name:@"chocolate chip"],
@@ -89,7 +92,14 @@
 - (void)filterContentForSearchBarText:(NSString *)searchText scope:(NSString *)scope {
     [self.filteredCandyArray removeAllObjects];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
-    self.filteredCandyArray = [NSMutableArray arrayWithArray:[self.candyArray filteredArrayUsingPredicate:predicate]];
+    NSArray *tempArray = [self.candyArray filteredArrayUsingPredicate:predicate];
+    
+    if (![scope isEqualToString:@"All"]) {
+        NSPredicate *scopePredicate = [NSPredicate predicateWithFormat:@"SELF.category contains[c] %@", scope];
+        tempArray = [tempArray filteredArrayUsingPredicate:scopePredicate];
+    }
+    
+    self.filteredCandyArray = [NSMutableArray arrayWithArray:tempArray];
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods
