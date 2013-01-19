@@ -34,6 +34,10 @@
     self.candySearchBar.showsScopeBar = NO;
     [self.candySearchBar sizeToFit];
     
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + self.candySearchBar.bounds.size.height;
+    self.tableView.bounds = newBounds;
+    
     self.candyArray = [NSArray arrayWithObjects:
                   [Candy candyOfCategory:@"chocolate" name:@"chocolate bar"],
                   [Candy candyOfCategory:@"chocolate" name:@"chocolate chip"],
@@ -57,6 +61,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)goToSearch:(id)sender {
+    [self.candySearchBar becomeFirstResponder];
+}
+
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
