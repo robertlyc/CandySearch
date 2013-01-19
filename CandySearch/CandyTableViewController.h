@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CandyTableViewController : UITableViewController
+@interface CandyTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *candyArray;
+@property (nonatomic, weak) IBOutlet UISearchBar *candySearchBar;
+@property (nonatomic, strong) NSMutableArray *filteredCandyArray;
 
 @end

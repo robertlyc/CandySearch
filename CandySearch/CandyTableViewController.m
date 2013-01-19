@@ -15,6 +15,8 @@
 
 @implementation CandyTableViewController
 @synthesize candyArray = _candyArray;
+@synthesize candySearchBar = _candySearchBar;
+@synthesize filteredCandyArray = _filteredCandyArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,6 +42,9 @@
                   [Candy candyOfCategory:@"other" name:@"sour chew"],
                   [Candy candyOfCategory:@"other" name:@"peanut butter cup"],
                   [Candy candyOfCategory:@"other" name:@"gummi bear"], nil];
+    
+    self.filteredCandyArray = [NSMutableArray arrayWithCapacity:[self.candyArray count]];
+    
     [self.tableView reloadData];
     
 }
@@ -53,7 +58,11 @@
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.candyArray.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return self.filteredCandyArray.count;
+    } else {
+        return self.candyArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +73,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Candy *candy = [self.candyArray objectAtIndex:indexPath.row];
+    Candy *candy;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        candy = [self.filteredCandyArray objectAtIndex:indexPath.row];
+    } else {
+        candy = [self.candyArray objectAtIndex:indexPath.row];
+    }
     
     cell.textLabel.text = candy.name;
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -72,8 +86,30 @@
     return cell;
 }
 
+- (void)filterContentForSearchBarText:(NSString *)searchText scope:(NSString *)scope {
+    [self.filteredCandyArray removeAllObjects];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
+    self.filteredCandyArray = [NSMutableArray arrayWithArray:[self.candyArray filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles]
+                       objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
+    [self filterContentForSearchBarText:searchString scope:scope];
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    NSString *scope = [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption];
+    [self filterContentForSearchBarText:self.searchDisplayController.searchBar.text scope:scope];
+    return YES;
+}
+
 - (void)viewDidUnload {
     _candyArray = nil;
+    _filteredCandyArray = nil;
     [super viewDidUnload];
 }
 
