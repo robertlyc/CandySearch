@@ -43,14 +43,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKW-Zo-934" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="wGS-lY-VbX">
-                    <connections>
-                        <outlet property="delegate" destination="SGh-fx-97c" id="hXI-PE-rmf"/>
-                        <outlet property="searchContentsController" destination="SGh-fx-97c" id="dWA-lW-WRq"/>
-                        <outlet property="searchResultsDataSource" destination="SGh-fx-97c" id="h8Q-Iv-zxv"/>
-                        <outlet property="searchResultsDelegate" destination="SGh-fx-97c" id="chU-yj-HBC"/>
-                    </connections>
-                </searchDisplayController>
                 <searchDisplayController id="8cl-xx-BeV">
                     <connections>
                         <outlet property="delegate" destination="SGh-fx-97c" id="yCZ-U6-oTx"/>
