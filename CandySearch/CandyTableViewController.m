@@ -107,6 +107,28 @@
     return YES;
 }
 
+#pragma mark - TableView Delegate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
+}
+
+#pragma mark - Seuge
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"candyDetail"]) {
+        UIViewController *candyDetailViewController = [segue destinationViewController];
+        if (sender == self.searchDisplayController.searchResultsTableView) {
+            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            NSString *destinationTitle = [[self.filteredCandyArray objectAtIndex:indexPath.row] name];
+            candyDetailViewController.title = destinationTitle;
+        } else {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            NSString *destinationTitle = [[self.candyArray objectAtIndex:indexPath.row] name];
+            candyDetailViewController.title = destinationTitle;
+        }
+    }
+}
+
+
 - (void)viewDidUnload {
     _candyArray = nil;
     _filteredCandyArray = nil;
