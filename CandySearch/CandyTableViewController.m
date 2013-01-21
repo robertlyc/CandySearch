@@ -142,7 +142,7 @@
         } else {
             NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
             NSString *destinationTitle = [[self.candyArray objectAtIndex:indexPath.row] name];
-            candyDetailViewController.title = destinationTitle;
+            candyDetailViewController.title = destinationTitle ;
         }
     }
 }
